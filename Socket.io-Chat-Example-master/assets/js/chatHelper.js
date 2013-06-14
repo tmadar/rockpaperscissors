@@ -17,10 +17,12 @@ $(document).ready(function(){
 		}
 		else if(message.type == 5){
 			var historicalText = $("#chatHistoryTextArea").val();
+
 			$("#chatHistoryTextArea").val(historicalText + message.sender + ":> " + message.chatMsg + "\n");			
 		}
 		else if(message.type == 11){
 			$("#onlineUsersTextArea").text("");
+
 			for(var i = 0; i < message.chatMsg.length; i++){
 				if(i == 0){
 					$("#onlineUsersTextArea").text($("#onlineUsersTextArea").text() + message.chatMsg[i].nickname);					
